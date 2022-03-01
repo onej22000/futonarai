@@ -1,63 +1,50 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 布団洗いに特化したクリーニング店「フトン洗いの匠（架空の店舗）」のウェブサイト
 
-Things you may want to cover:
+# サイト概要
+日本人は世界一の綺麗好きと言っていいくらいの国民性ですが、布団に関しては洗うという.
+発想は少ない状況です。
+しかしながら、布団を天日干ししてもダニはほぼ死滅せず、布団専用掃除機でも半分程度しか.
+ダニを除去できません。
+布団洗いを行うことでダニを９７％除去し、なおかつ高温乾燥によって死んだダニの死骸を.
+洗い流すことができることが化学的に実証されているため、本サイトではその効果を広く.
+伝えることを目指し、日本人の清潔度、健康に寄与します。
 
-* Ruby version
+# サイトテーマ
+布団洗いの効果を広くお知らせし、日本の全ての布団を洗い尽くすことを目的とします。
 
-* System dependencies
+# テーマを選んだ理由
+ダニやハウスダストなど様々なアレルギーに悩む人が増えてきており、日本人の３０％ほどは.
+何らかのアレルギーを持っていると言われています。
+毎日、寝る布団を洗うことで、アレルギーの軽減や清潔度を向上させることができ、アレルギーに.
+悩む多くの人を救うことができる可能性があるためです。
 
-* Configuration
+# ターゲットユーザ
+布団を洗たい人、洗ってみたいが料金やサービス、効果をまず調べてみたい人、アレルギー体質の方
 
-* Database creation
+# 主な利用シーン
+布団を洗ってみたいが料金やサービス、効果を調べたり、気に入った場合の布団洗いの来店予約
 
-* Database initialization
+# 設計書
+[https://docs.google.com/spreadsheets/d/1bBQl5sbc0Ec75SGxdYCKI4mZj2XM7xlN4qvgJtmeiy8/edit?usp=sharing](URL)
 
-* How to run the test suite
+# チャレンジ要素一覧
+[https://docs.google.com/spreadsheets/d/1c9GdsANz-5IZOpzYHcHbs6q-a_0P-nLff4M_XThG6rI/edit?usp=sharing](URL)
+*flexbox
+*環境変数化
+*CRUD機能
+*お問い合わせ
+*README
+*予約機能
+*Instagram投稿表示
+*動画埋め込み（自分作成動画）
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+# 開発環境
 
-* ...
-
-フトン洗いの匠
-
-サイト概要
-布団を洗えるクリーニング店「フトン洗いの匠」のサイト
-
-サイトテーマ
-フトン洗いの匠のサービス、予約、問い合わせなどができる。
-
-テーマを選んだ理由
-私はクリーニング店を経営しており、サービスの紹介や予約管理ができるサイトを作りたかったため。
-
-ターゲットユーザ
-布団を洗たい人、洗ってみたいが料金やサービスをまず調べてみたい人
-
-主な利用シーン
-布団を洗ってみたいが料金やサービスをまず調べたり、布団洗いの予約
-
-設計書
-https://docs.google.com/spreadsheets/d/1bBQl5sbc0Ec75SGxdYCKI4mZj2XM7xlN4qvgJtmeiy8/edit?usp=sharing
-
-チャレンジ要素一覧
-flexbox
-環境変数化
-CRUD機能
-お問い合わせ
-README
-予約機能
-Instagram投稿表示
-動画埋め込み（自分作成動画）
-
-開発環境
-
-- OS：Linux(CentOS)
-- 言語：HTML,CSS,JavaScript,Ruby,SQL
-- フレームワーク：Ruby on Rails
-- JS ライブラリ：jQuery
-- IDE：Cloud9
+* OS：macOS Monterey
+* 言語：HTML,CSS,JavaScript,Ruby,SQL
+* フレームワーク：Ruby on Rails
+* JS ライブラリ：jQuery
+* IDE：Cloud9
 
