@@ -1,16 +1,116 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Futonarai</title>
+    <title>フトン洗いの匠</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+       <header class="shadow-sm">
+      <% if flash[:notice] %>
+  　　　　　　　　<p><%= flash[:notice] %></p>
+　　　<% end %>
+
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand p-3" href="/"><%= link_to 'フトン洗いの匠', '/', class: 'navbar-brand' %>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+
+            <% if customer_signed_in? %>
+              <li class="nav-item">
+
+                <%#= link_to 'マイページ', customer_path(current_customer), class: 'btn btn-outline-secondary btn-sm'  %>
+              </li>
+
+              <li class="nav-item">
+                <%#= link_to "About", about_path, class: "btn btn-outline-secondary btn-sm" %>
+              </li>
+
+              <li class="nav-item">
+                <%#= link_to '商品一覧', items_path, class: 'btn btn-outline-secondary btn-sm' %>
+              </li>
+              <li class="nav-item">
+
+                <%#= link_to "カート", cart_items_path(current_customer.id), class: 'btn btn-outline-secondary btn-sm' %>
+
+              </li>
+              <li class="nav-item">
+                <%= link_to "ログアウト", destroy_customer_session_path, method: :delete, class: "btn btn-outline-secondary btn-sm" %>
+              </li>
+
+             <% elsif admin_signed_in? %>
+              <li>
+                <%#= link_to "商品一覧", admin_items_path, class: "btn btn-outline-secondary btn-sm" %>
+              </li>
+              <li>
+                <%#= link_to "会員一覧", admin_customers_path, class: "btn btn-outline-secondary btn-sm" %>
+              </li>
+
+              <li>
+                <%#= link_to "注文履歴一覧", admin_orders_path, class: "btn btn-outline-secondary btn-sm" %>
+              </li>
+              <li>
+                <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: "btn btn-outline-secondary btn-sm" %>
+              </li>
+
+            <% else %>
+
+              <li class="nav-item">
+                <%= link_to "About", about_path, class: "btn btn-outline-secondary btn-sm" %>
+              </li>
+              <li class="nav-item">
+                <%#= link_to '商品一覧',  items_path, class: 'btn btn-outline-secondary btn-sm' %>
+              </li>
+              <li class="nav-item">
+                 <%#= link_to "新規登録", new_customer_registration_path, class: "btn btn-outline-secondary btn-sm" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "ログイン", new_customer_session_path, class: "btn btn-outline-secondary btn-sm" %>
+              </li>
+            <% end %>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+
     <%= yield %>
+
+
+      <footer class="bg-dark text-white pt-1 pb-1">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <p>フトン洗いの匠は日本中のフトンを洗い尽くします！</p>
+
+        </div>
+          <div class="col-md-6">
+          <h6 class="text-white mt-2 mb-3">フトン洗いの匠は仮想の企業です</h6>
+          <h6 class="text-white mt-2 mb-3">フトン洗いの匠コーポレーション</h6>
+
+          </ul>
+          </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
   </body>
 </html>
