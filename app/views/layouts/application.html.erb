@@ -51,10 +51,10 @@
 
              <% elsif admin_signed_in? %>
               <li>
-                <%#= link_to "商品一覧", admin_items_path, class: "btn btn-outline-secondary btn-sm" %>
+                <%= link_to "サービス一覧", admin_service_path, class: "btn btn-outline-secondary btn-sm" %>
               </li>
               <li>
-                <%#= link_to "会員一覧", admin_customers_path, class: "btn btn-outline-secondary btn-sm" %>
+                <%= link_to "顧客一覧", admin_customers_path, class: "btn btn-outline-secondary btn-sm" %>
               </li>
 
               <li>
@@ -70,10 +70,10 @@
                 <%= link_to "About", about_path, class: "btn btn-outline-secondary btn-sm" %>
               </li>
               <li class="nav-item">
-                <%#= link_to '商品一覧',  items_path, class: 'btn btn-outline-secondary btn-sm' %>
+                <%= link_to 'サービス一覧',  customer_service_index_path, class: 'btn btn-outline-secondary btn-sm' %>
               </li>
               <li class="nav-item">
-                 <%#= link_to "新規登録", new_customer_registration_path, class: "btn btn-outline-secondary btn-sm" %>
+                 <%= link_to "新規登録", new_customer_registration_path, class: "btn btn-outline-secondary btn-sm" %>
               </li>
               <li class="nav-item">
                 <%= link_to "ログイン", new_customer_session_path, class: "btn btn-outline-secondary btn-sm" %>
@@ -94,7 +94,7 @@
     <div class="container">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <p>フトン洗いの匠は日本中のフトンを洗い尽くします！</p>
+          <p>フトン洗いの匠は布団洗い専門店です。</p>
 
         </div>
           <div class="col-md-6">

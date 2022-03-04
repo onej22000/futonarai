@@ -5,7 +5,7 @@
   <div class="row mt-4">
     <div class="col-3 m-auto">
       <h1>サービス新規登録</h1>
-        <%= form_with model: @service, url: admin_service_path(@service) do |f| %>
+        <% form_with model: @service, url: admin_service_path do |f| %>
         <div>
           <%= f.label :image_id, "サービスイメージ" %>
           <%= f.file_field :image, class: 'form-control' %>
