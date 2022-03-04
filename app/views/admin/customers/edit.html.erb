@@ -1,10 +1,7 @@
-<h1>Admin::Customers#edit</h1>
-<p>Find me in app/views/admin/customers/edit.html.erb</p>
-
 <div class="container">
   <div class="row mt-4">
     <div class="col-8 m-auto">
-      <h2><%= @customer.family_name %>さんの情報編集</h2>
+      <h2><%= @customer.family_name %>さんの詳細情報編集</h2>
       <div>
         <%= form_with model:@customer, url: admin_customer_path, local:true do |f| %>
           <table class='table'>
@@ -58,10 +55,10 @@
               <tr>
                 <th>顧客ステータス</th>
                 <td>
-                  <%= f.radio_button :delete, :false %>
-                  <%= f.label :delete, "有効" %>
-                  <%= f.radio_button :delete, :true %>
-                  <%= f.label :delete, "退会" %>
+                  <%#= f.radio_button :delete, :false %>
+                  <%#= f.label :delete, "有効" %>
+                  <%#= f.radio_button :delete, :true %>
+                  <%#= f.label :delete, "退会" %>
                 </td>
               </tr>
               <tr>

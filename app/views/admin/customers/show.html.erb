@@ -1,10 +1,7 @@
-<h1>Admin::Customers#show</h1>
-<p>Find me in app/views/admin/customers/show.html.erb</p>
-
 <div class="container">
   <div class="row">
     <div class="col-6 mt-5">
-      <h2><%= @customer.family_name %>さんの詳細</h2>
+      <h2><%= @customer.family_name %>さんの詳細情報</h2>
       <table class='table'>
         <tbody>
           <tr>
@@ -22,7 +19,7 @@
             <td><%= @customer.kana_first_name %></td>
           </tr>
           <tr>
-            <th>郵便暗号</th>
+            <th>郵便番号</th>
             <td><%= @customer.postal_code %></td>
           </tr>
           <tr>
