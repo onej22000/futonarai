@@ -2,8 +2,21 @@ Rails.application.routes.draw do
 
   root to: 'homes#top'
   get '/about' => 'homes#about'
-  devise_for :customers
   devise_for :admin
+
+  # 顧客用
+  # URL /customers/sign_in ...
+  devise_for :customers, controllers: {
+  registrations: "customer/registrations",
+  sessions: 'customer/sessions'
+  }
+
+  # 管理者用
+  # URL /admin/sign_in ...
+  devise_for :admin, controllers: {
+  sessions: "admin/sessions"
+  }
+
 
   namespace :customer do
     resources :service, only: [:index, :show]
