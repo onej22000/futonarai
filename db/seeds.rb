@@ -137,10 +137,4 @@ service = Service.create!(name: "毛布",
 service.image.attach(io: File.open(Rails.root.join('app/assets/images/shiki.jpg')),
                   filename: 'shiki.jpg')
 
-service = Service.create!(name: "枕",
-                  explanation: "とても乾きづらい枕は1,000円</br>仕上がり時間：１時間30分～2時間程度",
-                  price_without_tax: "1000",
-                  created_at: "2022-03-01",
-                  updated_at: "2022-03-01")
-service.image.attach(io: File.open(Rails.root.join('app/assets/images/shiki.jpg')),
-                  filename: 'shiki.jpg')
+
