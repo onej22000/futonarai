@@ -1,2 +1,31 @@
 <h1>Admin::Service#new</h1>
 <p>Find me in app/views/admin/service/new.html.erb</p>
+
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-3 m-auto">
+      <h1>サービス新規登録</h1>
+        <% form_with model: @service, url: admin_service_path do |f| %>
+        <div>
+          <%= f.label :image_id, "サービスイメージ" %>
+          <%= f.file_field :image, class: 'form-control' %>
+        </div>
+        <div>
+          <%= f.label :name, "サービス名", class: 'form-label' %>
+          <%= f.text_field :name, :placeholder => "サービス名", class: 'form-control'  %>
+        </div>
+        <div>
+          <%= f.label :explanation, "説明", class: 'form-label' %>
+          <%= f.text_area :explanation, :placeholder => "ここに説明文を記述します", class: 'form-control'  %>
+        </div>
+        <div>
+          <%= f.label :price_without_tax, "税抜価格", class: 'form-label' %>
+          <%= f.text_field :price_without_tax, placeholder:"300", class: 'form-control' %>
+        </div>
+        <div>
+          <%= f.submit "新規登録", class: 'btn btn-sm btn-success mt-3' %>
+        </div>
+        <% end %>
+    </div>
+  </div>
+</div>
