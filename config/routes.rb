@@ -1,14 +1,18 @@
 Rails.application.routes.draw do
 
-  devise_for :admins
-  devise_for :customers
-
   # 顧客用
   # URL /customers/sign_in ...
-#  devise_for :customers, controllers: {
-#    registrations: "customer/registrations",
-#    sessions: 'customer/sessions'
-#  }
+  devise_for :customers,skip: [:passwords], controllers: {
+    registrations: "customer/registrations",
+    sessions: 'customer/sessions'
+  }
+
+  # 管理者用
+  # URL /admin/sign_in ...
+  devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
+    sessions: "admin/sessions"
+  }
+
 
   root to: 'homes#top'
   get '/about' => 'homes#about'
