@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= favicon_link_tag('logo.jpg') %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -17,10 +18,9 @@
   　　　　　　　　<p><%= flash[:notice] %></p>
 　　　<% end %>
 
-      <nav class="navbar navbar-expand-lg navbar-light nav-bg">
-         <div class="container-fluid">
-          <a class="navbar-brand p-3" href="/"><%= link_to 'フトン洗いの匠', '/', class: 'navbar-brand' %>
-          </a>
+      <nav class="navbar navbar-expand-lg navbar-light nav-bg bg-warning">
+         <div class="container-fluid ">
+          <h2>フトン洗いの匠</h2><a class="navbar-brand p-1" href="/"><%= link_to image_tag 'logo.jpg', size: '40x40' %> </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -98,7 +98,7 @@
     <%= yield %>
 
 
-      <footer class="bg-dark text-white pt-1 pb-1">
+      <footer class="bg-success text-dark pt-2 pb-2">
         <div class="container">
           <div class="row no-gutters">
             <div class="col-md-4">
@@ -117,8 +117,8 @@
           <% end %>
         </li>
               <div class="col-md-6">
-              <h6 class="text-white mt-2 mb-3">フトン洗いの匠は仮想の企業です</h6>
-              <h6 class="text-white mt-2 mb-3">フトン洗いの匠コーポレーション</h6>
+              <h6 class="text-dark mt-2 mb-3">フトン洗いの匠は仮想の企業です</h6>
+              <h6 class="text-dark mt-2 mb-3">フトン洗いの匠コーポレーション</h6>
 
               </ul>
               </div>
