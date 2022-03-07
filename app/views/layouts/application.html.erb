@@ -43,9 +43,10 @@
                 <%= link_to 'サービス一覧', customer_service_index_path, class: 'btn btn-outline-secondary btn-sm' %>
               </li>
               <li class="nav-item">
-
                 <%#= link_to "カート", cart_items_path(current_customer.id), class: 'btn btn-outline-secondary btn-sm' %>
-
+              </li>
+              <li>
+                <%= link_to "布団洗い予約", customer_reservations_path, class: "btn btn-outline-secondary btn-sm" %>
               </li>
               <li class="nav-item">
                 <%= link_to "ログアウト", destroy_customer_session_path, method: :delete, class: "btn btn-outline-secondary btn-sm" %>
@@ -62,7 +63,7 @@
                 <%#= link_to "注文履歴一覧", admin_orders_path, class: "btn btn-outline-secondary btn-sm" %>
               </li>
               <li>
-                <%#= link_to "布団洗い予約", admin_customers_path, class: "btn btn-outline-secondary btn-sm" %>
+                <%= link_to "布団洗い予約", customer_reservation_path, class: "btn btn-outline-secondary btn-sm" %>
               </li>
               <li>
                 <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: "btn btn-outline-secondary btn-sm" %>

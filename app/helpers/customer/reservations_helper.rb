@@ -1,4 +1,4 @@
-module Customer::CustomersHelper
+module Customer::ReservationsHelper
   def times
     times = ["9:00",
              "9:30",
