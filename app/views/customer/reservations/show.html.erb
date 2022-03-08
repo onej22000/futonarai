@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center title">
+      <h1>予約詳細画面</h1>
+    </div>
+    <div class="col-12 mt-3 text-center content">
+      <div>
+        <label><strong>日付：</strong></label>
+        <p style="display:inline;"><%= @reservation.day %></p>
+      </div>
+      <div>
+        <label><strong>時間：</strong></label>
+        <p style="display:inline;"><%= @reservation.time %></p>
+      </div>
+    </div>
+    <div class="col-12 text-right">
+      <%= link_to '予約画面に戻る', customer_reservations_path %>
+    </div>
+  </div>
+</div>
