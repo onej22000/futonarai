@@ -10,6 +10,10 @@ class Customer::ReservationsController < ApplicationController
     @day = params[:day]
     @time = params[:time]
     @start_time = DateTime.parse(@day + " " + @time + " " + "JST")
+    message = @reservation.check_reservation_day(@day.to_date)
+    if !!message
+      redirect_back fallback_location: root_path, flash: { alert: message }
+    end
   end
 
   def show
@@ -31,5 +35,4 @@ class Customer::ReservationsController < ApplicationController
   def reservation_params
     params.require(:reservation).permit(:day, :time, :customer_id, :start_time)
   end
-
 end
