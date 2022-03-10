@@ -47,3 +47,62 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-12 mt-3 mx-auto">
+        <h3>布団洗い予約一覧</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">予約日</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @customer_reservations.each do |customer_reservation| %>
+              <td>
+                <%= customer_reservation.day %>
+                <%= customer_reservation.time %>
+              </td>
+              <td>
+                <%#= link_to '削除', resolve_asset_path(customer_reservation.id), method: :delete, data: { confirm: "削除してよろしいですか？", commit: "削除する", cancel: "やめる", title: "ご確認ください" } %>
+              </td>
+            </tr>
+            <% end %>
+            <% if @customer_reservations.blank? %>
+              <tr>
+                <td>予約はありません。</td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-12 mt-3 mx-auto">
+        <h3>布団洗い履歴</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">予約日</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @visit_historys.each do |visit_history| %>
+              <tr>
+                <td>
+                  <%= visit_history.day %>
+                  <%= visit_history.time %>
+                </td>
+              </tr>
+            <% end %>
+            <% if @visit_historys.blank? %>
+              <tr>
+                <td>布団洗い履歴はありません。</td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
