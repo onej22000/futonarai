@@ -32,7 +32,7 @@ class Customer::ReservationsController < ApplicationController
 
   def destroy
     @reservation = Reservation.find(params[:id])
-    if @ reservation.destroy
+    if @reservation.destroy
       flash[:success] = "ふとん洗い予約を削除しました。"
       redirect_to customer_path(current_customer.id)
     else
