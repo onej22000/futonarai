@@ -19,7 +19,7 @@ class Customer::ContactsController < ApplicationController
 private
 
   def contact_params
-    contact.require(:contact).permit(:name, :content)
+    params.require(:contact).permit(:name, :content)
   end
 
 end
