@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     resources :service, only: [:index, :show]
     resources :customers, only: [:show, :edit]
     resources :reservations
+    resources :contacts, only: [:new, :create]
   end
 
   namespace :admin do
