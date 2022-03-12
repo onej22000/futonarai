@@ -25,6 +25,7 @@ Rails.application.routes.draw do
     resources :customers, only: [:show, :edit]
     resources :reservations
     resources :contacts, only: [:new, :create]
+    post 'contacts/new', to: 'contacts#create'
   end
 
   namespace :admin do
