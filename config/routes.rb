@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    get 'reservations/index'
+    get 'reservations/show'
+  end
   # 顧客用
   # URL /customers/sign_in ...
   devise_for :customers,skip: [:passwords], controllers: {
@@ -31,6 +35,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :service
     resources :customers, only: [:index, :show, :edit, :update]
+    resources :reservations, only: [:index, :show]
   end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
