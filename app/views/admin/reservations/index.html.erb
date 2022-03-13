@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1>布団洗い予約状況</h1>
+    </div>
+    <div class="col-12 mt-3">
+      <%= week_calendar events: @reservations do |date, reservations| %>
+        <%= date.day %>
+      <% end %>
+    </div>
+  </div>
+</div>
