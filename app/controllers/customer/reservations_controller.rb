@@ -2,18 +2,17 @@ class Customer::ReservationsController < ApplicationController
   before_action :authenticate_customer!
 
   def index
-    @reservations = Reservation.all.where("day >= ?", Date.current).where("day < ?", Date.current >> 3).order(day: :desc)
+    @reservations = Reservation.all.where('day >= ?', Date.current).where('day < ?',
+                                                                          Date.current >> 3).order(day: :desc)
   end
 
   def new
     @reservation = Reservation.new
     @day = params[:day]
     @time = params[:time]
-    @start_time = DateTime.parse(@day + " " + @time + " " + "JST")
+    @start_time = DateTime.parse(@day + ' ' + @time + ' ' + 'JST')
     message = @reservation.check_reservation_day(@day.to_date)
-    if !!message
-      redirect_back fallback_location: root_path, flash: { alert: message }
-    end
+    redirect_back fallback_location: root_path, flash: { alert: message } if !!message
   end
 
   def show
@@ -33,7 +32,7 @@ class Customer::ReservationsController < ApplicationController
   def destroy
     @reservation = Reservation.find(params[:id])
     if @reservation.destroy
-      flash[:success] = "ふとん洗い予約を削除しました。"
+      flash[:success] = 'ふとん洗い予約を削除しました。'
       redirect_to customer_path(current_customer.id)
     else
       render :show
