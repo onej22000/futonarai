@@ -23,11 +23,11 @@
                   <% end %>
               </td>
               <td><%= customer.email %></td>
-              <%# if customer.delete == false %>
-              <!--<td class="scolor1">有効</td>-->
-              <%# else %>
-              <!--<td class="scolor2">退会</td>-->
-              <%# end %>
+              <% if customer.is_deleted == false %>
+              <td class="scolor1">有効</td>
+              <% else %>
+              <td class="scolor2">退会</td>
+              <% end %>
             </tr>
           <% end %>
         </tbody>

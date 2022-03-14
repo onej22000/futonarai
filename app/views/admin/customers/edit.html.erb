@@ -55,10 +55,10 @@
               <tr>
                 <th>顧客ステータス</th>
                 <td>
-                  <%#= f.radio_button :delete, :false %>
-                  <%#= f.label :delete, "有効" %>
-                  <%#= f.radio_button :delete, :true %>
-                  <%#= f.label :delete, "退会" %>
+                  <%= f.radio_button :is_deleted, :false %>
+                  <%= f.label :is_deleted, "有効" %>
+                  <%= f.radio_button :is_deleted, :true %>
+                  <%= f.label :is_deleted, "退会" %>
                 </td>
               </tr>
               <tr>
