@@ -38,15 +38,16 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:               'smtp.gmail.com',
-    port:                  587,
-    domain:                'gmail.com',
+    :address => 'smtp.gmail.com',
+    :port => 587,
+    :domain => 'gmail.com',
     #user_name:             ENV["ACTION_MAILER_CUSTOMER"],
-    user_name:             'futonarainotakumi55@gmail.com',
+    :user_name => 'futonarainotakumi55@gmail.com',
     #password:              ENV["ACTION_MAILER_KEY"],
-    password:              'takumi098',
-    authentication:        'login',
-    enable_starttls_auto:  true
+    #:password => 'takumi098',
+    :password => 'hayw fmbi phvj lqwl',
+    :authentication => :'login',
+    :enable_starttls_auto => true
   }
   config.action_mailer.perform_caching = false
 
