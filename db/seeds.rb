@@ -14,6 +14,7 @@ Customer.create!(email: "nobunaga@gmail.com",
                   postal_code: "1111111",
                   address: "尾張",
                   tel: "0000000000",
+                  is_deleted: "true",
                   created_at: "1534-06-23",
                   updated_at: "2022-03-01")
 
@@ -26,6 +27,7 @@ Customer.create!(email: "hideyoshi@gmail.com",
                   postal_code: "2222222",
                   address: "大阪",
                   tel: "0000000000",
+                  is_deleted: "false",
                   created_at: "1537-03-17",
                   updated_at: "2022-03-01")
 
@@ -38,6 +40,7 @@ Customer.create!(email: "ieyasu@gmail.com",
                   postal_code: "3333333",
                   address: "三河",
                   tel: "0000000000",
+                  is_deleted: "false",
                   created_at: "1543-01-31",
                   updated_at: "2022-03-01")
 
@@ -50,6 +53,7 @@ Customer.create!(email: "shingen@gmail.com",
                   postal_code: "9999999",
                   address: "甲斐",
                   tel: "99999999999",
+                  is_deleted: "true",
                   created_at: "1521-02-20",
                   updated_at: "2022-03-01")
 
@@ -62,6 +66,7 @@ Customer.create!(email: "kenshin@gmail.com",
                   postal_code: "9999999",
                   address: "越後",
                   tel: "99999999999",
+                  is_deleted: "false",
                   created_at: "1530-02-18",
                   updated_at: "2022-03-01")
 

@@ -56,6 +56,12 @@
               </li>
 
              <% elsif admin_signed_in? %>
+              <li class="nav-item">
+                <%= link_to 'トップ', root_path, class: 'btn btn-outline-secondary btn-sm'  %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "最新情報", about_path, class: "btn btn-outline-secondary btn-sm" %>
+              </li>
               <li>
                 <%= link_to "サービス一覧", admin_service_index_path, class: "btn btn-outline-secondary btn-sm" %>
               </li>
@@ -73,7 +79,9 @@
               </li>
 
             <% else %>
-
+              <li class="nav-item">
+                <%= link_to 'トップ', root_path, class: 'btn btn-outline-secondary btn-sm'  %>
+              </li>
               <li class="nav-item">
                 <%= link_to "最新情報", about_path, class: "btn btn-outline-secondary btn-sm" %>
               </li>
