@@ -44,7 +44,6 @@ Rails.application.configure do
     #user_name:             ENV["ACTION_MAILER_CUSTOMER"],
     :user_name => 'futonarainotakumi55@gmail.com',
     #password:              ENV["ACTION_MAILER_KEY"],
-    #:password => 'takumi098',
     :password => 'hayw fmbi phvj lqwl',
     :authentication => :'login',
     :enable_starttls_auto => true

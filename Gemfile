@@ -60,3 +60,4 @@ gem 'kaminari','~>1.2.1'
 gem "enum_help"
 gem 'pry-byebug', group: :development
 gem "simple_calendar", "~> 2.0"
+gem 'dotenv-rails'
