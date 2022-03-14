@@ -143,6 +143,6 @@ service.image.attach(io: File.open(Rails.root.join('app/assets/images/shiki.jpg'
                   filename: 'shiki.jpg')
 
 Admin.create!(
-              email: "admin@example.jp",
-              password: "123123",
+              email: ENV["ADMIN_MAIL"],
+              password: ENV["ADMIN_PASSWORD"],
               )
