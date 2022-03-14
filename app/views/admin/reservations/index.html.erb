@@ -10,3 +10,21 @@
     </div>
   </div>
 </div>
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+         <% @reservations.each do |reservation| %>
+            <tr>
+              <td><%= reservation.id %></td>
+              <td><%= link_to admin_reservations_path(reservation) do %>
+                    <%= reservation.day %>
+                    <%= reservation.time %>
+                  <% end %>
+              </td>
+              <td><%= reservation.customer_id %></td>
+              <td><%= reservation.start_time %></td>
+            </tr>
+          <% end %>
+    </div>
+  </div>
+</div>
