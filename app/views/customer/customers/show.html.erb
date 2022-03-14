@@ -32,11 +32,11 @@
           </tr>
           <tr>
             <th>会員ステータス</th>
-            <%# if @customer.delete == false %>
+            <% if @customer.is_deleted == false %>
               <td class="scolor1">有効</td>
-            <%# else %>
+            <% else %>
               <td class="scolor2">退会</td>
-            <%# end %>
+            <% end %>
           </tr>
         </tbody>
       </table>
