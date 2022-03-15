@@ -2,7 +2,7 @@ class Admin::ReservationsController < ApplicationController
   before_action :authenticate_admin!
   def index
     @reservations = Reservation.all.where('day >= ?', Date.current).where('day < ?',
-                                                                          Date.current >> 3).order(day: :desc)
+                                                                          Date.current >> 3).order(start_time: :asc)
   end
 
   def show
