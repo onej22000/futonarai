@@ -70,77 +70,54 @@ Customer.create!(email: "kenshin@gmail.com",
                   created_at: "1530-02-18",
                   updated_at: "2022-03-01")
 
-service = Service.create!(name: "敷布団（ポリエステル）シングル",
-                  explanation: "ポリエステルの敷布団シングル洗い</br>仕上がり時間：１時間程度",
+service = Service.create!(name: "掛布団、敷布団（和布団以外）",
+                  explanation: "布団洗い（和布団以外）</br>仕上がり時間：１時間程度",
                   price_without_tax: "2000",
                   created_at: "2022-03-01",
                   updated_at: "2022-03-01")
 service.image.attach(io: File.open(Rails.root.join('app/assets/images/shiki.jpg')),
                   filename: 'shiki.jpg')
 
-service = Service.create!(name: "敷布団（ポリエステル以外）シングル",
-                  explanation: "ポリエステル以外の敷布団シングル洗い</br>仕上がり時間：１時間30分程度",
-                  price_without_tax: "2500",
-                  created_at: "2022-03-01",
-                  updated_at: "2022-03-01")
-service.image.attach(io: File.open(Rails.root.join('app/assets/images/shiki.jpg')),
-                  filename: 'shiki.jpg')
-
-service = Service.create!(name: "敷布団（ポリエステル）ダブル",
-                  explanation: "ポリエステルの敷布団ダブル洗い</br>仕上がり時間：１時間30分程度",
-                  price_without_tax: "2500",
-                  created_at: "2022-03-01",
-                  updated_at: "2022-03-01")
-service.image.attach(io: File.open(Rails.root.join('app/assets/images/shiki.jpg')),
-                  filename: 'shiki.jpg')
-
-service = Service.create!(name: "敷布団（ポリエステル以外）ダブル",
-                  explanation: "ポリエステル以外の敷布団ダブル洗い</br>仕上がり時間:2時間程度",
+service = Service.create!(name: "和布団",
+                  explanation: "和布団洗い</br>仕上がり時間：2時間程度",
                   price_without_tax: "3000",
                   created_at: "2022-03-01",
                   updated_at: "2022-03-01")
-service.image.attach(io: File.open(Rails.root.join('app/assets/images/shiki.jpg')),
-                  filename: 'shiki.jpg')
+service.image.attach(io: File.open(Rails.root.join('app/assets/images/wafuton.jpg')),
+                  filename: 'wafuton.jpg')
 
-service = Service.create!(name: "掛布団（ポリエステル）シングル",
-                  explanation: "ポリエステルの掛布団シングル洗い</br>仕上がり時間：１時間程度",
-                  price_without_tax: "2000",
+service = Service.create!(name: "キッズ布団",
+                  explanation: "キッズ布団洗い</br>仕上がり時間：2時間程度",
+                  price_without_tax: "1500",
                   created_at: "2022-03-01",
                   updated_at: "2022-03-01")
-service.image.attach(io: File.open(Rails.root.join('app/assets/images/shiki.jpg')),
-                  filename: 'shiki.jpg')
-
-service = Service.create!(name: "掛布団（ポリエステル以外）シングル",
-                  explanation: "ポリエステル以外の掛布団シングル洗い</br>仕上がり時間：１時間30分程度",
-                  price_without_tax: "2500",
-                  created_at: "2022-03-01",
-                  updated_at: "2022-03-01")
-service.image.attach(io: File.open(Rails.root.join('app/assets/images/shiki.jpg')),
-                  filename: 'shiki.jpg')
-
-service = Service.create!(name: "掛布団（ポリエステル）ダブル",
-                  explanation: "ポリエステルの掛布団ダブル洗い</br>仕上がり時間：１時間30分程度",
-                  price_without_tax: "2500",
-                  created_at: "2022-03-01",
-                  updated_at: "2022-03-01")
-service.image.attach(io: File.open(Rails.root.join('app/assets/images/shiki.jpg')),
-                  filename: 'shiki.jpg')
-
-service = Service.create!(name: "掛布団（ポリエステル以外）ダブル",
-                  explanation: "ポリエステル以外の掛布団ダブル洗い</br>仕上がり時間：2時間程度",
-                  price_without_tax: "3000",
-                  created_at: "2022-03-01",
-                  updated_at: "2022-03-01")
-service.image.attach(io: File.open(Rails.root.join('app/assets/images/shiki.jpg')),
-                  filename: 'shiki.jpg')
+service.image.attach(io: File.open(Rails.root.join('app/assets/images/wafuton.jpg')),
+                  filename: 'wafuton.jpg')
 
 service = Service.create!(name: "毛布",
-                  explanation: "布団と一緒に出していただくと500円</br>仕上がり時間：30分程度",
-                  price_without_tax: "500",
+                  explanation: "毛布洗い</br>仕上がり時間：１時間程度",
+                  price_without_tax: "1000",
                   created_at: "2022-03-01",
                   updated_at: "2022-03-01")
-service.image.attach(io: File.open(Rails.root.join('app/assets/images/shiki.jpg')),
-                  filename: 'shiki.jpg')
+service.image.attach(io: File.open(Rails.root.join('app/assets/images/moufu.jpg')),
+                  filename: 'moufu.jpg')
+
+service = Service.create!(name: "まくら",
+                  explanation: "まくら洗い</br>仕上がり時間:2時間程度",
+                  price_without_tax: "1000",
+                  created_at: "2022-03-01",
+                  updated_at: "2022-03-01")
+service.image.attach(io: File.open(Rails.root.join('app/assets/images/makura.jpg')),
+                  filename: 'makura.jpg')
+
+service = Service.create!(name: "シーツ",
+                  explanation: "布団１枚に対しシーツ１枚を無料サービス！：１時間程度",
+                  price_without_tax: "0",
+                  created_at: "2022-03-01",
+                  updated_at: "2022-03-01")
+service.image.attach(io: File.open(Rails.root.join('app/assets/images/sheet.jpg')),
+                  filename: 'sheet.jpg')
+
 
 Admin.create!(
               email: ENV["ADMIN_MAIL"],
