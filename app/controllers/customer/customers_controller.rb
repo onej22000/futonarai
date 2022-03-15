@@ -1,4 +1,6 @@
 class Customer::CustomersController < ApplicationController
+  before_action :authenticate_customer!
+
   def show
     @customer = Customer.find(current_customer.id)
     @customer_reservations = current_customer.reservations.where('start_time >= ?', DateTime.current).order(day: :desc)
