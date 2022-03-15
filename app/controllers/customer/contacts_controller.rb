@@ -1,4 +1,6 @@
 class Customer::ContactsController < ApplicationController
+  before_action :authenticate_customer!
+
   def new
     @contact = Contact.new
   end

@@ -1,5 +1,8 @@
 class Admin::ServiceController < ApplicationController
-  def new; end
+    before_action :authenticate_admin!
+
+  def new
+  end
 
   def create
     @service = Service.new(service_params)
