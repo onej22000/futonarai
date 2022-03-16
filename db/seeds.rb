@@ -87,11 +87,11 @@ service.image.attach(io: File.open(Rails.root.join('app/assets/images/wafuton.jp
                   filename: 'wafuton.jpg')
 
 service = Service.create!(name: "キッズ布団",
-                  explanation: "キッズ布団洗い</br>仕上がり時間：2時間程度",
+                  explanation: "キッズ布団洗い</br>仕上がり時間：1時間30分程度",
                   price_without_tax: "1500",
                   created_at: "2022-03-01",
                   updated_at: "2022-03-01")
-service.image.attach(io: File.open(Rails.root.join('app/assets/images/wafuton.jpg')),
+service.image.attach(io: File.open(Rails.root.join('app/assets/images/kiz.jpg')),
                   filename: 'wafuton.jpg')
 
 service = Service.create!(name: "毛布",
