@@ -71,7 +71,7 @@ Customer.create!(email: "kenshin@gmail.com",
                   updated_at: "2022-03-01")
 
 service = Service.create!(name: "掛布団、敷布団（和布団以外）",
-                  explanation: "布団洗い（和布団以外）</br>仕上がり時間：１時間程度",
+                  explanation: "布団洗い（和布団以外）</br>[仕上がり時間：１時間程度]",
                   price_without_tax: "2000",
                   created_at: "2022-03-01",
                   updated_at: "2022-03-01")
@@ -79,7 +79,7 @@ service.image.attach(io: File.open(Rails.root.join('app/assets/images/shiki.jpg'
                   filename: 'shiki.jpg')
 
 service = Service.create!(name: "和布団",
-                  explanation: "和布団洗い</br>仕上がり時間：2時間程度",
+                  explanation: "和布団洗い</br>[仕上がり時間：2時間程度]",
                   price_without_tax: "3000",
                   created_at: "2022-03-01",
                   updated_at: "2022-03-01")
@@ -87,7 +87,7 @@ service.image.attach(io: File.open(Rails.root.join('app/assets/images/wafuton.jp
                   filename: 'wafuton.jpg')
 
 service = Service.create!(name: "キッズ布団",
-                  explanation: "キッズ布団洗い</br>仕上がり時間：1時間30分程度",
+                  explanation: "キッズ布団洗い</br>[仕上がり時間：1時間30分程度]",
                   price_without_tax: "1500",
                   created_at: "2022-03-01",
                   updated_at: "2022-03-01")
@@ -95,7 +95,7 @@ service.image.attach(io: File.open(Rails.root.join('app/assets/images/kiz.jpg'))
                   filename: 'wafuton.jpg')
 
 service = Service.create!(name: "毛布",
-                  explanation: "毛布洗い</br>仕上がり時間：１時間程度",
+                  explanation: "毛布洗い</br>[仕上がり時間：１時間程度]",
                   price_without_tax: "1000",
                   created_at: "2022-03-01",
                   updated_at: "2022-03-01")
@@ -103,7 +103,7 @@ service.image.attach(io: File.open(Rails.root.join('app/assets/images/moufu.jpg'
                   filename: 'moufu.jpg')
 
 service = Service.create!(name: "まくら",
-                  explanation: "まくら洗い</br>仕上がり時間:2時間程度",
+                  explanation: "まくら洗い</br>[仕上がり時間:2時間程度]",
                   price_without_tax: "1000",
                   created_at: "2022-03-01",
                   updated_at: "2022-03-01")
@@ -111,7 +111,7 @@ service.image.attach(io: File.open(Rails.root.join('app/assets/images/makura.jpg
                   filename: 'makura.jpg')
 
 service = Service.create!(name: "シーツ",
-                  explanation: "布団１枚に対しシーツ１枚を無料サービス！：１時間程度",
+                  explanation: "布団１枚に対しシーツ１枚を無料サービス！[仕上がり時間：１時間程度]",
                   price_without_tax: "0",
                   created_at: "2022-03-01",
                   updated_at: "2022-03-01")
