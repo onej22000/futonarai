@@ -36,6 +36,7 @@ Rails.application.routes.draw do
     resources :service
     resources :customers, only: [:index, :show, :edit, :update]
     resources :reservations, only: [:index, :show]
+    get "search" => "searches#search"
   end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
