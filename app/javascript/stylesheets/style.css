@@ -4,3 +4,8 @@
 .skippr {
   height: 400px !important;
 }
+
+.footer {
+  height: 200px;
+  position: fixed;
+}
