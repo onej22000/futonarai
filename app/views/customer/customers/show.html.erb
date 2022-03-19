@@ -1,0 +1,108 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 mt-5">
+      <h2>マイページ</h2>
+      <table class='table'>
+        <tbody>
+          <tr>
+        	  <th>氏名</th>
+        	  <td><%= @customer.family_name %></td>
+        	  <td><%= @customer.first_name %></td>
+          </tr>
+          <tr>
+            <th>フリガナ</th>
+            <td><%= @customer.kana_family_name %></td>
+            <td><%= @customer.kana_first_name %></td>
+          </tr>
+          <tr>
+            <th>郵便番号</th>
+            <td><%= @customer.postal_code %></td>
+          </tr>
+          <tr>
+            <th>住所</th>
+            <td><%= @customer.address %></td>
+          </tr>
+          <tr>
+            <th>電話番号</th>
+            <td><%= @customer.tel %></td>
+          </tr>
+          <tr>
+            <th>メールアドレス</th>
+            <td><%= @customer.email %></td>
+          </tr>
+          <tr>
+            <th>会員ステータス</th>
+            <% if @customer.is_deleted == false %>
+              <td class="scolor1">有効</td>
+            <% else %>
+              <td class="scolor2">退会</td>
+            <% end %>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <%= link_to '編集する', edit_customer_customer_path(@customer), class: "btn btn-sm btn-success edit_customer_#{@customer.id}" %>
+        <%#= link_to '注文履歴一覧', admin_order_path, class: 'btn btn-sm btn-primary ms-4' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-12 mt-3 mx-auto">
+        <h3>布団洗い予約一覧</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">予約日</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @customer_reservations.each do |customer_reservation| %>
+              <td>
+                <%= customer_reservation.day %>
+                <%= customer_reservation.time %>
+              </td>
+              <td>
+                <%#= link_to '削除', resolve_asset_path(customer_reservation.id), method: :delete, data: { confirm: "削除してよろしいですか？", commit: "削除する", cancel: "やめる", title: "ご確認ください" } %>
+              </td>
+            </tr>
+            <% end %>
+            <% if @customer_reservations.blank? %>
+              <tr>
+                <td>予約はありません。</td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-12 mt-3 mx-auto">
+        <h3>布団洗い履歴</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">予約日</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @visit_historys.each do |visit_history| %>
+              <tr>
+                <td>
+                  <%= visit_history.day %>
+                  <%= visit_history.time %>
+                </td>
+              </tr>
+            <% end %>
+            <% if @visit_historys.blank? %>
+              <tr>
+                <td>布団洗い履歴はありません。</td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

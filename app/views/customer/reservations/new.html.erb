@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center title">
+      <h1>布団洗い新規予約画面</h1>
+    </div>
+    <div class="col-12 mt-3 content">
+      <%= form_with model: @reservation, url: customer_reservations_path, local: true, class: 'form' do |form| %>
+      <%#S= render 'layouts/error_messages', model: form.object %>
+      <div class="day form-group">
+        <%= form.label :day, '日付' %>
+        <%= form.text_field :day, class: 'form-control', value: @day, readonly: true %>
+      </div>
+      <div class="time form-group">
+        <%= form.label :time, '時間' %>
+        <%= form.text_field :time, class: 'form-control', value: @time, readonly: true %>
+      </div>
+      <%= form.hidden_field :current_custoer_id, value: current_customer.id %>
+      <%= form.hidden_field :start_time, value: @start_time %>
+      <div class="submit">
+        <%= form.submit value: '布団洗いを予約する', class: 'btn btn-primary mx-auto d-block' %>
+      </div>
+    <% end %>
+    <div class="col-12 text-right">
+      <%= link_to '戻る', customer_reservations_path %>
+    </div>
+    </div>
+  </div>
+</div>
