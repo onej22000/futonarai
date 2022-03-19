@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-12 m-auto">
+      <div class="headline">
+        <h2>サービス一覧</h2>
+      </div>
+        <table class="table mt-2">
+          <thead>
+            <tr>
+              <th>サービスID</th>
+              <th>イメージ</th>
+              <th>サービス名</th>
+              <th>説明</th>
+              <th>税抜価格</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @services.each do |service| %>
+              <tr>
+                <td><%= service.id %></td>
+                <td><%= image_tag service.image, size: "130x100" %></td>
+                <td><%= link_to service.name, customer_service_path(service) %></td>
+                <td><%= simple_format(service.explanation) %></td>
+                <td><%= service.price_without_tax.to_s(:delimited) %>円</td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>

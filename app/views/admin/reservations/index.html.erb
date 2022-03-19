@@ -1,0 +1,46 @@
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-12 text-center">-->
+<!--      <h1>布団洗い予約状況</h1>-->
+<!--    </div>-->
+<!--    <div class="col-12 mt-3">-->
+<!--      <%#= week_calendar events: @reservations do |date, reservations| %>-->
+<!--        <%#= date.day %>-->
+<!--      <%# end %>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<div class="container">
+  <div class="row justify-content-center mt-4">
+    <div class="col-10 row justify-content-between">
+      <h4>布団洗い予約状況</h4>
+      <table class="table">
+        <thead>
+          <tr class="table-active">
+            <th>予約ID</th>
+            <th>予約日時</th>
+            <th>顧客ID</th>
+            <th>氏名</th>
+            <th>電話番号</th>
+            <th>メールアドレス</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @reservations.each do |reservation| %>
+            <tr>
+              <td><%= reservation.id %></td>
+              <td><%= link_to admin_reservations_path(reservation) do %>
+                    <%= reservation.start_time.to_s(:datetime_jp) %>
+                  <% end %>
+              </td>
+              <td><%= reservation.customer_id %></td>
+              <td><%= reservation.customer.family_name %><%=reservation.customer.first_name %></td>
+              <td><%= reservation.customer.tel %></td>
+              <td><%= reservation.customer.email %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

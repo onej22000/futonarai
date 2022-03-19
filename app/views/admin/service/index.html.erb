@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-12 m-auto">
+      <div class="headline">
+        <h2>サービス一覧</h2>
+        <%= link_to new_admin_service_path, class: 'ms-auto fs-3 tcolor' do %>
+          <i class="fas fa-plus"></i>
+        <% end %>
+      </div>
+        <table class="table mt-2">
+          <thead>
+            <tr>
+              <th>サービスID</th>
+              <th>イメージ</th>
+              <th>サービス名</th>
+              <th>説明</th>
+              <th>税抜価格</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @services.each do |service| %>
+              <tr>
+                <td><%= service.id %></td>
+                <td><%= image_tag service.image, size: "130x100" %></td>
+                <td><%= link_to service.name, admin_service_path(service) %></td>
+                <td><%= simple_format(service.explanation) %></td>
+                <td><%= service.price_without_tax.to_s(:delimited) %>円</td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>

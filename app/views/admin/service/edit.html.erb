@@ -1,0 +1,32 @@
+
+<div class="container my-5">
+  <h2>サービス編集</h2>
+  <div class="row mt-2">
+    <div class="col-5">
+      <%= form_with model: @service, url: admin_service_path  do |f| %>
+        <table class="cart_products">
+          <tr>
+            <th>サービスイメージ</th>
+            <td><%= f.file_field :image, class: 'form-control' %></td>
+          </tr>
+          <tr>
+            <th>サービス名<th>
+            <tb><%= f.text_field :name, :placeholder => "サービス名", class: 'form-control' %></tb>
+          </tr>
+          <tr>
+            <th>説明</th>
+            <td><%= f.text_area :explanation, :placeholder => "ここに説明文を記述します", class: 'form-control' %></td>
+          </tr>
+          <tr>
+            <th>税抜価格</th>
+            <td><%= f.text_field :price_without_tax, :placeholder => "1000", class: 'form-control' %></td>
+          </tr>
+        </table>
+        <br>
+        <div>
+          <%= f.submit "変更を保存", class: 'btn btn-sm btn-success' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
