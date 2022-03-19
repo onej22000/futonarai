@@ -28,10 +28,7 @@
 ## チャレンジ要素一覧
 [https://docs.google.com/spreadsheets/d/1c9GdsANz-5IZOpzYHcHbs6q-a_0P-nLff4M_XThG6rI/edit?usp=sharing](URL)
 
-
-
-
-# 開発環境
+## 開発環境
 
 * OS：macOS Monterey
 * 言語：HTML,CSS,JavaScript,Ruby,SQL
