@@ -14,8 +14,8 @@ import "bootstrap";
 //import "../stylesheets/application.scss"
 import '@fortawesome/fontawesome-free/js/all'
 window.$ = window.jQuery = require('jquery');
-import '../packs/skippr.min.js'
-import '../packs/script.js'
+//import '../packs/skippr.min.js'
+//import '../packs/script.js'
 //import '../stylesheets/skippr.css'
 //import '../stylesheets/style.css'
 
