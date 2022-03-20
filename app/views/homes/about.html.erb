@@ -4,7 +4,7 @@
 
         <div class="row">
          <div class="col-lg-9">
-          <div class="skipper">
+          <div class="skippr">
            <!--<h3>布団洗い最新情報</h3>-->
             <div style="height: 400px; background-image: url(<%= asset_path "tenpo.jpg" %>)"></div>
             <div style="height: 400px; background-image: url(<%= asset_path "arai_before.jpg" %>)" ></div>
@@ -36,7 +36,7 @@
 <script>
 $(document).on('turbolinks:load', function () {
 // オプションを指定してSkipprの実行
-$("#skipper").skippr({
+$(".skippr").skippr({
   // スライドショーの変化（"fade" or "slide"）
   transition : 'fade',
   // 変化にかかる時間（ミリ秒）
