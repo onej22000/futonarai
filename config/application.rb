@@ -19,5 +19,6 @@ module Futonarai
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
     config.time_zone = 'Tokyo'
+    config.hosts << "06b54f0802d94f91a9cd3939bd10f292.vfs.cloud9.ap-northeast-1.amazonaws.com"
   end
 end

@@ -4,27 +4,27 @@
 
         <div class="row">
          <div class="col-lg-9">
-          <div class="skippr">
-           <!--<h3>布団洗い最新情報</h3>-->
-            <div style="height: 400px; background-image: url(<%= asset_path "tenpo.jpg" %>)"></div>
-            <div style="height: 400px; background-image: url(<%= asset_path "arai_before.jpg" %>)" ></div>
-            <div style="height: 400px; background-image: url(<%= asset_path "arai_after.jpg" %>)" ></div>
-            <div style="height: 400px; background-image: url(<%= asset_path "yogore_before.jpg" %>)" ></div>
-            <div style="height: 400px; background-image: url(<%= asset_path "yogore_after.jpg" %>)" ></div>
-            <div style="height: 400px; background-image: url(<%= asset_path "bunkatu.jpg" %>)" ></div>
-         </div>
-        </div>
 
 <!-- スライダーのコンテナ -->
 <div class="swiper">
   <!-- 必要に応じたwrapper -->
   <div class="swiper-wrapper">
     <!-- スライド -->
-    <div class="swiper-slide">Slide 1</div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide" style="height: 400px; background-image: url(<%= asset_path "tenpo.jpg" %>)"></div>
+            <div class="swiper-slide" style="height: 400px; background-image: url(<%= asset_path "arai_before.jpg" %>)" ></div>
+            <div class="swiper-slide" style="height: 400px; background-image: url(<%= asset_path "arai_after.jpg" %>)" ></div>
+            <div class="swiper-slide" style="height: 400px; background-image: url(<%= asset_path "yogore_before.jpg" %>)" ></div>
+            <div class="swiper-slide" style="height: 400px; background-image: url(<%= asset_path "yogore_after.jpg" %>)" ></div>
+            <div class="swiper-slide" style="height: 400px; background-image: url(<%= asset_path "bunkatu.jpg" %>)" ></div>
   </div>
+  <!-- 必要に応じてページネーション -->
+<div class="swiper-pagination"></div>
+<!-- 必要に応じてナビボタン -->
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
 </div>
+        </div>
+
 
            <div class="col-lg-3" style="background-color: aqua;">
           　<h4>Twitter投稿最新情報</h4>
@@ -45,27 +45,16 @@
          </div>
 
 <script>
-const swiper = new Swiper(".swiper", {});
+const swiper = new Swiper(".swiper", {
+    // ページネーションが必要なら追加
+  pagination: {
+    el: ".swiper-pagination"
+  },
+  // ナビボタンが必要なら追加
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
+});
 </script>
-
-<!--<div class="container">-->
-<!--  <div class="row">-->
-<!--    <div class="col-lg-8">-->
-<!--      <h4>布団洗いbefore（煎餅布団が）</h4>-->
-<!--      <div>-->
-           <%#= image_tag 'arai_before', size: "650x650" %>
-<!--      </div>-->
-<!--      <h4>布団洗いafter（ふわふわに）</h4>-->
-<!--      <div>-->
-        <%#= image_tag 'arai_after', size: "650x650" %>
-<!--      </div>-->
-<!--      <h4>布団洗いbeforeその２（汚れがついた布団が）</h4>-->
-<!--      <div>-->
-<!--        <%#= image_tag 'yogore_before', size: "650x650" %>
-<!--      </div>-->
-<!--      <h4>布団洗いafterその２（綺麗に）</h4>-->
-<!--      <div>-->
-<!--        <%#= image_tag 'yogore_after', size: "650x650" %>
-<!--      </div>-->
-<!--    </div>-->
 
