@@ -15,6 +15,17 @@
          </div>
         </div>
 
+<!-- スライダーのコンテナ -->
+<div class="swiper">
+  <!-- 必要に応じたwrapper -->
+  <div class="swiper-wrapper">
+    <!-- スライド -->
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+  </div>
+</div>
+
            <div class="col-lg-3" style="background-color: aqua;">
           　<h4>Twitter投稿最新情報</h4>
           　   <div class="row">
@@ -34,32 +45,7 @@
          </div>
 
 <script>
-$(document).on('turbolinks:load', function () {
-// オプションを指定してSkipprの実行
-$(".skippr").skippr({
-  // スライドショーの変化（"fade" or "slide"）
-  transition : 'fade',
-  // 変化にかかる時間（ミリ秒）
-  speed : 500,
-  // easingの種類
-  easing : 'easeOutQuart',
-  // ナビゲーションの形（"block" or "bubble"）
-  navType : 'block',
-  // 子要素の種類（"div" or "img"）
-  childrenElementType : 'div',
-  // ナビゲーション矢印の表示（trueで表示）
-  arrows : true,
-  // スライドショーの自動再生（falseで自動再生なし）
-  autoPlay : false,
-  // 自動再生時のスライド切替間隔（ミリ秒）
-  autoPlayDuration : 500,
-  // キーボードの矢印キーによるスライド送りの設定（trueで有効）
-  keyboardOnAlways : true,
-  // 1枚目のスライド表示時に戻る矢印を表示するかどうか [false]:矢印を隠さない [true]:矢印を隠す
-  hidePrevious : false
-});
-
-});
+const swiper = new Swiper(".swiper", {});
 </script>
 
 <!--<div class="container">-->
