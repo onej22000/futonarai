@@ -3,6 +3,7 @@
     <div class="col-12 text-center">
       <h1>布団洗い予約画面</h1>
       <p>3ヶ月先まで予約することができます。</p>
+      <%= @message %>
     </div>
     <div class="col-12 mt-3">
       <%= week_calendar events: @reservations do |date, reservations| %>
