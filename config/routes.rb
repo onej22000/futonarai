@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 
   namespace :customer do
     resources :service, only: [:index, :show]
-    resources :customers, only: [:show, :edit]
+    resources :customers, only: [:show, :edit, :update]
     resources :reservations
     resources :contacts, only: [:new, :create]
     post 'contacts/new', to: 'contacts#create'

@@ -2,6 +2,7 @@ class Admin::ServiceController < ApplicationController
     before_action :authenticate_admin!
 
   def new
+    @service = Service.new
   end
 
   def create
@@ -21,9 +22,12 @@ class Admin::ServiceController < ApplicationController
     @service = Service.find(params[:id])
   end
 
-  def edit; end
+  def edit
+    @service = Service.find(params[:id])
+  end
 
   def update
+    @service = Service.find(params[:id])
     @service.update(service_params)
     redirect_to admin_service_path(@service)
   end
@@ -33,6 +37,6 @@ class Admin::ServiceController < ApplicationController
   private
 
   def service_params
-    params.require(:service).permit(:name, :explanation, :price_without_tax, :image)
+    params.require(:service).permit(:name, :explanation, :price_without_tax, :image, :customer_id)
   end
 end

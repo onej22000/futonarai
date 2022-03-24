@@ -1,11 +1,8 @@
-<h1>Customer::Service#show</h1>
-<p>Find me in app/views/customer/service/show.html.erb</p>
-
 <div class="container my-5">
   <h2>サービス詳細</h2>
   <div class="row">
 		<div class="col-md-3">
-      <%= image_tag @service.service_image, size: "130x100" %>
+      <%= image_tag @service.image, size: "130x100" %>
     </div>
     <div class="col-md-9">
       <table class="table-box">
@@ -18,8 +15,8 @@
           <td><%= simple_format(@service.explanation) %></td>
         </tr>
         <tr>
-          <th>税込価格<br>（税抜価格）</th>
-          <td><%= @service.add_tax.to_s(:delimited) %><br>(<%= @service.price.to_s(:delimited) %>)<span>円</span></td>
+          <th>税込価格<br></th>
+          <td><%= @service.price_without_tax.to_s(:delimited) %><span>円</span></td>
         </tr>
 
       </table>

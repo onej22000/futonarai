@@ -3,7 +3,7 @@
     <div class="col-8 m-auto">
       <h2>マイページの編集</h2>
       <div>
-        <%= form_with model:@customer, url: admin_customer_path, local:true do |f| %>
+        <%= form_with model:@customer, url: customer_customer_path(@customer), local:true do |f| %>
           <table class='table'>
             <tbody>
               <tr>

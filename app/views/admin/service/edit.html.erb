@@ -3,7 +3,7 @@
   <h2>サービス編集</h2>
   <div class="row mt-2">
     <div class="col-5">
-      <%= form_with model: @service, url: admin_service_path  do |f| %>
+      <%= form_with model: @service, url: "/admin/service/#{@service.id}", local: true, class: 'form'  do |f| %>
         <table class="cart_products">
           <tr>
             <th>サービスイメージ</th>
@@ -18,7 +18,7 @@
             <td><%= f.text_area :explanation, :placeholder => "ここに説明文を記述します", class: 'form-control' %></td>
           </tr>
           <tr>
-            <th>税抜価格</th>
+            <th>税込価格</th>
             <td><%= f.text_field :price_without_tax, :placeholder => "1000", class: 'form-control' %></td>
           </tr>
         </table>

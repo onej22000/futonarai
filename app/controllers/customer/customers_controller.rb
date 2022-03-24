@@ -8,6 +8,7 @@ class Customer::CustomersController < ApplicationController
                                                                                                     DateTime.current << 12).order(day: :desc)
   end
 
+
   def edit
     @customer = Customer.find(current_customer.id)
   end
