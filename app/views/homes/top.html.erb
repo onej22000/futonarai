@@ -1,7 +1,27 @@
-<%= video_tag asset_path('futonaraikai.mp4'), controls: true, autoplay: true, loop: true, muted: true, width: "1000", height: "800" %>
+<div class="container">
 
-<h4>機器稼働状況</h4>
-<a href="https://futonmaki.jp/export/kusatsu.txt">機器稼働状況を知りたい場合はクリック</a>
+      <%= video_tag asset_path('futonaraikai.mp4'), controls: true, autoplay: true, loop: true, muted: true, width: "600", height: "350" %>
 
-<%= link_to("機器稼働状況を知りたい場合はクリック", "https://futonmaki.jp/export/kusatsu.txt") %>
-
+    <div class="col-6">
+      <h4>機器稼働状況</h4>
+      <p>機器の空き状況をご確認いただいてからご来店いただくとお待たせすることがなくなります。</p>
+      <table class='table mt-2'>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>機器種類</th>
+            <th>運転状況</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @result.each do | res |%>
+            <tr>
+              <td><%="#{res[0]}" %> </td>
+              <td><%="#{res[2]}" %> </td>
+              <td><%="#{res[3]}" %> </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+</div>
