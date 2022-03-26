@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
 
-  namespace :admin do
-    get 'reservations/index'
-    get 'reservations/show'
-  end
+
   # 顧客用
   # URL /customers/sign_in ...
   devise_for :customers,skip: [:passwords], controllers: {

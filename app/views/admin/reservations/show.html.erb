@@ -12,6 +12,22 @@
         <label><strong>時間：</strong></label>
         <p style="display:inline;"><%= @reservation.time %></p>
       </div>
+      <div>
+        <label><strong>顧客ID：</strong></label>
+        <p style="display:inline;"><%= @reservation.customer_id %></p>
+      </div>
+      <div>
+        <label><strong>氏名：</strong></label>
+        <p style="display:inline;"><%= @reservation.customer.family_name %><%= @reservation.customer.first_name %></p>
+      </div>
+      <div>
+        <label><strong>電話番号：</strong></label>
+        <p style="display:inline;"><%= @reservation.customer.tel %></p>
+      </div>
+      <div>
+        <label><strong>メールアドレス：</strong></label>
+        <p style="display:inline;"><%= @reservation.customer.email %></p>
+      </div>
     </div>
     <div class="col-12 text-right">
       <%= link_to '予約画面に戻る', customer_reservations_path %>
