@@ -8,7 +8,11 @@ class Admin::ServiceController < ApplicationController
   def create
     @service = Service.new(service_params)
     if @service.save
-      redirect_to admin_service_path(@service)
+      tags = Vision.get_image_data(@service.image)
+      tags.each do |tag|
+        @service.tags.create(name: tag)
+      end
+        redirect_to admin_service_path(@service)
     else
       render 'new'
     end
